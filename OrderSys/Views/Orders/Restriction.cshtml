@@ -1,0 +1,18 @@
+﻿@{
+    @Html.DropDownList("Sortby", new SelectListItem[]
+            {
+         new SelectListItem() { Text = "Open", Value = "open" },
+         new SelectListItem() { Text = "Close", Value = "close" }},
+                 new { @onchange = "Change(this.value)"
+                 });
+    }
+<script>
+    function Change(val) {
+
+        $.ajax({
+            url: "../api/restrictionsapi/" + val, success: function (result) {
+                console.log("success");
+            }
+        });
+    }
+</script>
