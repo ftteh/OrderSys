@@ -1,39 +1,40 @@
 ﻿@model IEnumerable<OrderSys.Models.Choice>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Item)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pic)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            <img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style="height:150px;width:150px;" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+@{
+    Layout = "~/Views/Shared/_Choice.cshtml";
 }
 
-</table>
+
+
+
+
+
+<section class="flex-sect"></section>
+<section class="blk-sect">
+    <div class="row" id="ixwzh">
+
+
+        @foreach (var item in Model)
+        {
+            <div class="cell" id="iyi1q"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style="height:150px;width:150px;" id="i37me" /></div>
+            <div class="cell" id="ipurk">
+                <div id="ic92f"><b>@Html.DisplayFor(modelItem => item.Item)</b></div>
+                <div id="irj03">RM @Html.DisplayFor(modelItem => item.Price)</div>
+                <div id="i3s6n">DEsjhghjghjc sfsdf sfdsdfsdfsdfs sdfsfdsff wfwefvsd s sdfs dfs</div>
+                <div class="row" id="iqlm2">
+                    <div class="cell" id="is86x">
+                            <div class="row">
+                                <div class="cell" id="iyrir">
+                                    <button class="button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                                </div>
+                                <div class="cell" id="ix7c2">
+                                    <button class="button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+<section class="bdg-sect"></section>

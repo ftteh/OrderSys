@@ -121,8 +121,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\choice.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\style.css" />
+    <Content Include="Content\owner.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -157,17 +158,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905190439075_e.cs" />
-    <Compile Include="Migrations\201905190439075_e.Designer.cs">
-      <DependentUpon>201905190439075_e.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905190454361_pic.cs" />
-    <Compile Include="Migrations\201905190454361_pic.Designer.cs">
-      <DependentUpon>201905190454361_pic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905190853186_oc.cs" />
-    <Compile Include="Migrations\201905190853186_oc.Designer.cs">
-      <DependentUpon>201905190853186_oc.cs</DependentUpon>
+    <Compile Include="Migrations\201905200431240_1st.cs" />
+    <Compile Include="Migrations\201905200431240_1st.Designer.cs">
+      <DependentUpon>201905200431240_1st.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
@@ -210,6 +203,8 @@
     <Content Include="Views\Choices\Create.cshtml" />
     <Content Include="Views\Orders\Restriction.cshtml" />
     <Content Include="Views\MenuChoice\Index.cshtml" />
+    <Content Include="Views\Shared\_Owner.cshtml" />
+    <Content Include="Views\Shared\_Choice.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,14 +217,8 @@
     <Folder Include="Views\UploadPic\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905190439075_e.resx">
-      <DependentUpon>201905190439075_e.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905190454361_pic.resx">
-      <DependentUpon>201905190454361_pic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905190853186_oc.resx">
-      <DependentUpon>201905190853186_oc.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905200431240_1st.resx">
+      <DependentUpon>201905200431240_1st.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
