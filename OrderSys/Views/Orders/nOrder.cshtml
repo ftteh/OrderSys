@@ -1,0 +1,31 @@
+﻿@model IEnumerable<OrderSys.Models.OrderChoice>
+@{
+    ViewBag.Title = "nOrder";
+}
+
+<h2>nOrder</h2>
+
+@foreach (var item in Model)
+{
+    <div class="flex-title">Menu of the day.  @item.Order.Date<br id="ifplmr-2-2" /></div>
+    <div class="flex-desc">Tick to add them.<br id="i7bkub-2-2-2" /></div>
+    <div class="cards">
+        @foreach (var i in item.Choices)
+        {
+            <div class="card">
+                <div class="card-header">@*<img src="~/imWages/choices/@Url.Content(i.Pic)" alt="Image" style='height: 100%; width: 100%; object-fit: contain' />*@</div>
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-title">@Html.DisplayFor(modelItem => i.Item)</div>
+                    <div class="card-sub-title">RM @Html.DisplayFor(modelItem => i.Price)</div>
+                    <div class="card-sub-title">
+                        <div class="card-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<OrderSys.Models.Choice>
+@{
+    Layout = "~/Views/Shared/_Order.cshtml";
+}
+<section class="flex-sect">
+    <div class="container-width">
+        <div class="flex-title">Haven't chosen dishes of the day.  @DateTime.Now.ToShortDateString()<br id="ifplmr-2-2" /></div>
+        <div class="flex-desc">Tick to add them.<br id="i7bkub-2-2-2" /></div>
+        <form action="~/Orders/Add">
+            <div class="cards">
+                @foreach (var item in Model)
+                {
+                    <div class="card">
+                        <div class="card-header"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style='height: 100%; width: 100%; object-fit: contain' /></div>
+                        <div class="card-body">
+                            <div class="card-title"></div>
+                            <div class="card-title">@Html.DisplayFor(modelItem => item.Item)<input value="True" name=@item.Item type="checkbox" /></div>
+                            <div class="card-sub-title">RM @Html.DisplayFor(modelItem => item.Price)</div>
+                            <div class="card-sub-title">
+                                <div class="card-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <section class="am-sect">
+                <div class="container-width">
+                    <div class="am-container">
+                        <div class="am-content">
+                            <div class="am-title">Order info:<br id="iwhmol-2" /></div>
+                            <div class="row">
+                                <div class="cell" id="i668l7">
+                                        <div class="form-group">
+                                            <label for="Date" class="label">Date</label><input placeholder="12/12/19"
+                                                                                               type="text" name="Date" required class="input" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">Time</label><input type="text" placeholder="Time"
+                                                                                    name="Time" class="input" />
+                                        </div><label class="label">Location</label><input type="text"
+                                                                                          placeholder="Location" class="input" />
+                                        <div class="form-group"></div>
+                                        <div class="form-group"><button type="submit" class="button">Order</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </form>
+
+    </div>
+</section>
+<section class="am-sect">
+    <div class="container-width"></div>
+</section>

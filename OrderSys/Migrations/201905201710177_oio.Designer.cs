@@ -7,13 +7,13 @@ namespace OrderSys.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class _1st : IMigrationMetadata
+    public sealed partial class oio : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_1st));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(oio));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905200431240_1st"; }
+            get { return "201905201710177_oio"; }
         }
         
         string IMigrationMetadata.Source

@@ -24,7 +24,7 @@ namespace OrderSys.Controllers
                         select s).FirstOrDefault();
             if (test == null)
             {
-                return Redirect("menuchoice/Create");
+                return Redirect("~/menuchoice/Create");
             }
             {
                 var dbmc = (from s in db.MenuChoices

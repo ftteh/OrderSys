@@ -3,7 +3,7 @@ namespace OrderSys.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _1st : DbMigration
+    public partial class update_oc_model : DbMigration
     {
         public override void Up()
         {
@@ -39,26 +39,12 @@ namespace OrderSys.Migrations
                         Time = c.String(),
                         Location = c.String(),
                         Amount = c.Int(nullable: false),
-                        MenuChoice_Id = c.Int(),
+                        Username = c.String(),
                         Orderer_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.MenuChoices", t => t.MenuChoice_Id)
                 .ForeignKey("dbo.Orderers", t => t.Orderer_Id)
-                .Index(t => t.MenuChoice_Id)
                 .Index(t => t.Orderer_Id);
-            
-            CreateTable(
-                "dbo.MenuChoices",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        ChoiceId = c.Int(nullable: false),
-                        MenuId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Menus", t => t.MenuId, cascadeDelete: true)
-                .Index(t => t.MenuId);
             
             CreateTable(
                 "dbo.Deliverers",
@@ -83,6 +69,18 @@ namespace OrderSys.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Deliverers", t => t.Deliverer_Id)
                 .Index(t => t.Deliverer_Id);
+            
+            CreateTable(
+                "dbo.MenuChoices",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ChoiceId = c.Int(nullable: false),
+                        MenuId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Menus", t => t.MenuId, cascadeDelete: true)
+                .Index(t => t.MenuId);
             
             CreateTable(
                 "dbo.Restrictions",
@@ -156,10 +154,9 @@ namespace OrderSys.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.Orders", "Orderer_Id", "dbo.Orderers");
-            DropForeignKey("dbo.Salaries", "Deliverer_Id", "dbo.Deliverers");
-            DropForeignKey("dbo.Orders", "MenuChoice_Id", "dbo.MenuChoices");
             DropForeignKey("dbo.MenuChoices", "MenuId", "dbo.Menus");
             DropForeignKey("dbo.Choices", "MenuChoice_Id", "dbo.MenuChoices");
+            DropForeignKey("dbo.Salaries", "Deliverer_Id", "dbo.Deliverers");
             DropForeignKey("dbo.OrderChoices", "Choice_Id", "dbo.Choices");
             DropForeignKey("dbo.OrderChoices", "Order_Id", "dbo.Orders");
             DropForeignKey("dbo.MenuChoice1", "Choice_Id", "dbo.Choices");
@@ -168,10 +165,9 @@ namespace OrderSys.Migrations
             DropIndex("dbo.OrderChoices", new[] { "Order_Id" });
             DropIndex("dbo.MenuChoice1", new[] { "Choice_Id" });
             DropIndex("dbo.MenuChoice1", new[] { "Menu_Id" });
-            DropIndex("dbo.Salaries", new[] { "Deliverer_Id" });
             DropIndex("dbo.MenuChoices", new[] { "MenuId" });
+            DropIndex("dbo.Salaries", new[] { "Deliverer_Id" });
             DropIndex("dbo.Orders", new[] { "Orderer_Id" });
-            DropIndex("dbo.Orders", new[] { "MenuChoice_Id" });
             DropIndex("dbo.Choices", new[] { "MenuChoice_Id" });
             DropTable("dbo.OrderChoices");
             DropTable("dbo.MenuChoice1");
@@ -179,9 +175,9 @@ namespace OrderSys.Migrations
             DropTable("dbo.Owners");
             DropTable("dbo.Orderers");
             DropTable("dbo.Restrictions");
+            DropTable("dbo.MenuChoices");
             DropTable("dbo.Salaries");
             DropTable("dbo.Deliverers");
-            DropTable("dbo.MenuChoices");
             DropTable("dbo.Orders");
             DropTable("dbo.Menus");
             DropTable("dbo.Choices");
