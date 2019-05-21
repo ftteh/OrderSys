@@ -1,31 +1,43 @@
 ﻿@model IEnumerable<OrderSys.Models.OrderChoice>
 @{
-    ViewBag.Title = "nOrder";
+    Layout = "~/Views/Shared/_nOrder.cshtml";
 }
 
-<h2>nOrder</h2>
-
-@foreach (var item in Model)
-{
-    <div class="flex-title">Menu of the day.  @item.Order.Date<br id="ifplmr-2-2" /></div>
-    <div class="flex-desc">Tick to add them.<br id="i7bkub-2-2-2" /></div>
-    <div class="cards">
-        @foreach (var i in item.Choices)
-        {
-            <div class="card">
-                <div class="card-header">@*<img src="~/imWages/choices/@Url.Content(i.Pic)" alt="Image" style='height: 100%; width: 100%; object-fit: contain' />*@</div>
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <div class="card-title">@Html.DisplayFor(modelItem => i.Item)</div>
-                    <div class="card-sub-title">RM @Html.DisplayFor(modelItem => i.Price)</div>
-                    <div class="card-sub-title">
+<section class="flex-sect">
+    <div class="container-width">
+        <div class="flex-title">Flex is the new black</div>
+        <div class="flex-desc">
+            With flexbox system you're able to build complex layouts easily and with free responsivity
+        </div>
+        <div class="cards">
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">@item.Order.Date  @@  @item.Order.Time<br /></div>
+                        <div class="card-sub-title">
+                            RM @item.Order.Amount     @item.Order.Location<br/>
+                            <button type="button"><a href="nEdit?orderid=@item.Order.Id">Edit</a></button>
+                            <button type="button"><a href="del?orderid=@item.Order.Id">Delete</a></button>
+                        </div>
                         <div class="card-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore
+                            @foreach (var i in item.Choices)
+                            {
+                                @i.Item<text>  </text>
+                            }
                         </div>
                     </div>
+                    <div class="row" id="ijkkl2">
+                        @foreach (var i in item.Choices)
+                        {
+                            <div class="cell" id="ipi4fb">
+
+                                <img id="igex5n" src="~/images/choices/@Url.Content(i.Pic)" />
+                            </div>
+                        }
+                    </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-}
+</section>

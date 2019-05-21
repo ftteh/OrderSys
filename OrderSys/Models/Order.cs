@@ -23,6 +23,7 @@ namespace OrderSys.Models
             this.Time = time;
             this.Location = location;
             this.OrdererId = ordererid;
+            this.Amount = amt;
         }
         public int Id { get; set; }
         public string Date { get; set; }
