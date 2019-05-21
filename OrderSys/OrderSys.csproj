@@ -184,19 +184,24 @@
     <Compile Include="Migrations\201905201710177_oio.Designer.cs">
       <DependentUpon>201905201710177_oio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905211500427_tidy.cs" />
+    <Compile Include="Migrations\201905211500427_tidy.Designer.cs">
+      <DependentUpon>201905211500427_tidy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905211524517_tid.cs" />
+    <Compile Include="Migrations\201905211524517_tid.Designer.cs">
+      <DependentUpon>201905211524517_tid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Restriction.cs" />
-    <Compile Include="Models\Deliverer.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuChoice.cs" />
     <Compile Include="Models\AllContext.cs" />
     <Compile Include="Models\OrderChoice.cs" />
     <Compile Include="Models\Orderer.cs" />
     <Compile Include="Models\Owner.cs" />
-    <Compile Include="Models\Salary.cs" />
-    <Compile Include="Models\Sales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,19 +232,14 @@
     <Content Include="Views\MenuChoice\Index.cshtml" />
     <Content Include="Views\Shared\_Owner.cshtml" />
     <Content Include="Views\Shared\_Choice.cshtml" />
-    <Content Include="Views\Orders\allOrders.cshtml" />
-    <Content Include="Views\Orders\Delete.cshtml" />
-    <Content Include="Views\Orders\Detail.cshtml" />
     <Content Include="Views\Orders\DisplayMenu.cshtml" />
-    <Content Include="Views\Orders\Edit.cshtml" />
-    <Content Include="Views\Orders\Index.cshtml" />
-    <Content Include="Views\Orders\Order.cshtml" />
     <Content Include="Views\Orders\nMenu.cshtml" />
     <Content Include="Views\Orders\nOrder.cshtml" />
     <Content Include="Views\Shared\_nOrder.cshtml" />
     <Content Include="Views\Orders\nOrderList.cshtml" />
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Orders\nEdit.cshtml" />
+    <Content Include="Views\Orders\AllOrders.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -268,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905201710177_oio.resx">
       <DependentUpon>201905201710177_oio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905211500427_tidy.resx">
+      <DependentUpon>201905211500427_tidy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905211524517_tid.resx">
+      <DependentUpon>201905211524517_tid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

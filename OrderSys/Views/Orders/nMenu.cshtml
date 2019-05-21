@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OrderSys.Models.Choice>
+﻿@model IEnumerable<OrderSys.Models.MenuChoice>
 @{
     Layout = "~/Views/Shared/_Order.cshtml";
 }
@@ -8,22 +8,25 @@
         <div class="flex-desc">Tick to add them.<br id="i7bkub-2-2-2" /></div>
         <form action="~/Orders/Add">
             <div class="cards">
-                @foreach (var item in Model)
+                @foreach (var i in Model)
                 {
-                    <div class="card">
-                        <div class="card-header"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style='height: 100%; width: 100%; object-fit: contain' /></div>
-                        <div class="card-body">
-                            <div class="card-title"></div>
-                            <div class="card-title">@Html.DisplayFor(modelItem => item.Item)<input onchange="calc()" value="@(item.Price)" name=@item.Item type="checkbox" /></div>
-                            <div class="card-sub-title">RM @Html.DisplayFor(modelItem => item.Price)</div>
-                            <div class="card-sub-title">
-                                <div class="card-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore
+                    foreach (var item in i.Choices)
+                    {
+                        <div class="card">
+                            <div class="card-header"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style='height: 100%; width: 100%; object-fit: contain' /></div>
+                            <div class="card-body">
+                                <div class="card-title"></div>
+                                <div class="card-title">@Html.DisplayFor(modelItem => item.Item)<input onchange="calc()" value="@(item.Price)" name=@item.Item type="checkbox" /></div>
+                                <div class="card-sub-title">RM @Html.DisplayFor(modelItem => item.Price)</div>
+                                <div class="card-sub-title">
+                                    <div class="card-desc">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    }
                 }
             </div>
 

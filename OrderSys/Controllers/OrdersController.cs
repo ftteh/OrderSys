@@ -1,6 +1,7 @@
 ﻿using OrderSys.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -12,8 +13,58 @@ namespace OrderSys.Controllers
 
         public ActionResult nMenu()
         {
-            return View(db.Choices.ToList());
+
+            var today = DateTime.Today;
+            var mc = new MenuChoice();
+
+            var dbmenus = (from s in db.Menus
+                           where DbFunctions.TruncateTime(s.Date) == today
+                           select s).ToList();
+            var test = (from s in db.Menus
+                        where DbFunctions.TruncateTime(s.Date) == today
+                        select s).FirstOrDefault();
+
+            var dbmc = (from s in db.MenuChoices
+                        select s).ToList();
+
+            var menus = from left in db.MenuChoices
+                        join right in db.Choices on left.ChoiceId equals right.Id into temp
+                        from right in temp.DefaultIfEmpty()
+                        select new { left, right };
+
+            var choices = from right in db.Choices
+                          join left in db.MenuChoices on right.Id equals left.ChoiceId
+                          into temp
+                          from left in temp.DefaultIfEmpty()
+                          select new { left, right };
+
+            var f = menus.Union(choices);
+            List<MenuChoice> mclist = new List<MenuChoice>(dbmenus.ToList().Count());
+
+            for (int i = 0; i < dbmenus.Count; i++)
+            {
+
+                int j = dbmenus[i].Id;
+                mc.Menu = dbmenus[i];
+                mc.Choices = (from right in db.Choices
+                              join left in db.MenuChoices on right.Id equals left.ChoiceId
+                              into temp
+                              from left in temp.DefaultIfEmpty()
+                              where left.MenuId == j
+                              select right).ToList();
+                mclist.Add(new MenuChoice(mc.Menu, mc.Choices));
+            }
+            return View(mclist);
         }
+
+
+
+
+        public ActionResult AllOrders()
+        {
+            return View(db.Orders.ToList());
+        }
+
         public ActionResult Add()
         {
             List<string> both = new List<string>();
@@ -291,6 +342,8 @@ namespace OrderSys.Controllers
 
             return Redirect("nOrder");
         }
+
+
 
 
     }

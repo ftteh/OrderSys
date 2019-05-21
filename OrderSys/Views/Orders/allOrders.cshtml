@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<OrderSys.Models.Order>
 
 @{
-    ViewBag.Title = "allOrders";
+    ViewBag.Title = "AllOrders";
 }
 
-<h2>Index</h2>
+<h2>AllOrders</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Index")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -21,8 +21,12 @@
             @Html.DisplayNameFor(model => model.Location)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Amount)
+            @Html.DisplayNameFor(model => model.Amount) (RM)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdererId)
+        </th>
+
         <th></th>
     </tr>
 
@@ -42,8 +46,12 @@
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) ||
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.DisplayFor(modelItem => item.OrdererId)
+            </td>
+            <td>
+                @*<button type="button" class="btn btn-primary btn-md" onclick="location.href='deliver?orderid=@item.Id'">Delivered</button>
+                <button type="button" class="btn btn-primary btn-md" onclick="location.href='undeliver?orderid=@item.Id'">Undeliver</button>
+                <button type="button" class="btn btn-primary btn-md" onclick="location.href='del?orderid=@item.Id'">Delete</button>*@
             </td>
         </tr>
     }
