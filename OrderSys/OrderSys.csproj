@@ -217,6 +217,7 @@
     <Content Include="Views\Orderers\Edit.cshtml" />
     <Content Include="Views\Orderers\Index.cshtml" />
     <Content Include="Views\Orders\UpSettle.cshtml" />
+    <Content Include="Views\Orders\oidtest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
