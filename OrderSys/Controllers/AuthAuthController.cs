@@ -45,11 +45,11 @@ namespace OrderSys.Controllers
                 FormsAuthentication.SetAuthCookie(orderer.Username.ToString(), false);
                 if (result == "admin")
                 {
-                    return RedirectToAction("Create", "MenuChoice");
+                    return RedirectToAction("Index", "MenuChoice");
                 }
                 else
                 {
-                    return RedirectToAction("Create", "Menus");
+                    return RedirectToAction("Index", "Menus");
                 }
 
 

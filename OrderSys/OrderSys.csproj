@@ -155,6 +155,7 @@
       <BrowseToURL>/menuchoice/index</BrowseToURL>
     </Compile>
     <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\OrderersController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\OwnersController.cs" />
     <Compile Include="Controllers\RestrictionsApiController.cs" />
@@ -216,11 +217,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Owners\Create.cshtml" />
-    <Content Include="Views\Owners\Delete.cshtml" />
-    <Content Include="Views\Owners\Details.cshtml" />
-    <Content Include="Views\Owners\Edit.cshtml" />
-    <Content Include="Views\Owners\Index.cshtml" />
     <Content Include="Views\Menus\Create.cshtml" />
     <Content Include="Views\Menus\Delete.cshtml" />
     <Content Include="Views\Menus\Details.cshtml" />
@@ -247,6 +243,11 @@
     <Content Include="Views\Orders\AllOrders.cshtml" />
     <Content Include="Views\AuthAuth\Login.cshtml" />
     <Content Include="Views\AuthAuth\Logout.cshtml" />
+    <Content Include="Views\Orderers\Create.cshtml" />
+    <Content Include="Views\Orderers\Delete.cshtml" />
+    <Content Include="Views\Orderers\Details.cshtml" />
+    <Content Include="Views\Orderers\Edit.cshtml" />
+    <Content Include="Views\Orderers\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
