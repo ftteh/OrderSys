@@ -3,38 +3,37 @@
     Layout = "~/Views/Shared/_Choice.cshtml";
 }
 
-
-
-
-
-
-<section class="flex-sect"></section>
-<section class="blk-sect">
-    <div class="row" id="ixwzh">
-
-
-        @foreach (var item in Model)
-        {
-            <div class="cell" id="iyi1q"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style="height:150px;width:150px;" id="i37me" /></div>
-            <div class="cell" id="ipurk">
-                <div id="ic92f"><b>@Html.DisplayFor(modelItem => item.Item)</b></div>
-                <div id="irj03">RM @Html.DisplayFor(modelItem => item.Price)</div>
-                <div id="i3s6n">DEsjhghjghjc sfsdf sfdsdfsdfsdfs sdfsfdsff wfwefvsd s sdfs dfs</div>
-                <div class="row" id="iqlm2">
-                    <div class="cell" id="is86x">
-                            <div class="row">
-                                <div class="cell" id="iyrir">
-                                    <button class="button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
-                                </div>
-                                <div class="cell" id="ix7c2">
-                                    <button class="button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+<style>
+    body {
+        background-color: #222222;
+    }
+</style>
+    <div class="row" id="ixwzh"  >
+        <div class="cards">
+            @foreach (var item in Model)
+            {
+                <div class="column" >
+                    <div class="cell" id="iyi1q"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style="height:150px;width:150px;" id="i37me" /></div>
+                    <div class="cell" id="ipurk">
+                        <div id="ic92f" style="text-align:center"><b>@Html.DisplayFor(modelItem => item.Item)</b></div>
+                        <div id="irj03"style="text-align:center">RM @Html.DisplayFor(modelItem => item.Price)</div>
+                        <div id="i3s6n">DEsjhghjghjc sfsdf sfdsdfsdfsdfs sdfsfdsff wfwefvsd s sdfs dfs</div>
+                        <div class="row" id="iqlm2">
+                            <div class="cell" id="is86x">
+                                <div class="row">
+                                    <div class="cell" id="iyrir">
+                                        <button class="button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                                    </div>
+                                    <div class="cell" id="ix7c2">
+                                        <button class="button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
 
     </div>
-</section>
-<section class="bdg-sect"></section>
+

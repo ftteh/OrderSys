@@ -147,6 +147,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthAuthController.cs" />
     <Compile Include="Controllers\ChoicesController.cs">
       <BrowseToURL>/menuchoice/index</BrowseToURL>
     </Compile>
@@ -192,6 +193,10 @@
     <Compile Include="Migrations\201905211524517_tid.Designer.cs">
       <DependentUpon>201905211524517_tid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905220144361_auth.cs" />
+    <Compile Include="Migrations\201905220144361_auth.Designer.cs">
+      <DependentUpon>201905220144361_auth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\Order.cs" />
@@ -202,6 +207,7 @@
     <Compile Include="Models\OrderChoice.cs" />
     <Compile Include="Models\Orderer.cs" />
     <Compile Include="Models\Owner.cs" />
+    <Compile Include="MyAppRoleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +228,6 @@
     <Content Include="Views\Menus\Index.cshtml" />
     <Content Include="Views\MenuChoice\Create.cshtml" />
     <Content Include="Views\MenuChoice\Update.cshtml" />
-    <Content Include="Views\Choices\View.cshtml" />
     <Content Include="Views\Choices\Delete.cshtml" />
     <Content Include="Views\Choices\Details.cshtml" />
     <Content Include="Views\Choices\Edit.cshtml" />
@@ -240,6 +245,8 @@
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Orders\nEdit.cshtml" />
     <Content Include="Views\Orders\AllOrders.cshtml" />
+    <Content Include="Views\AuthAuth\Login.cshtml" />
+    <Content Include="Views\AuthAuth\Logout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -274,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905211524517_tid.resx">
       <DependentUpon>201905211524517_tid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220144361_auth.resx">
+      <DependentUpon>201905220144361_auth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
