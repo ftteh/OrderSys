@@ -395,5 +395,10 @@ namespace OrderSys.Controllers
             db.SaveChanges();
             return Redirect("AllOrders");
         }
+
+        public ActionResult oidtest()
+        {
+            return View();
+        }
     }
 }

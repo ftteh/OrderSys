@@ -37,6 +37,11 @@ namespace OrderSys.Controllers
                                  where x.Password == orderer.Password
                                  select x.Role).FirstOrDefault().ToString();
 
+                string oid = (from x in db.Orderers
+                                 where x.Username == orderer.Username
+                                 where x.Password == orderer.Password
+                                 select x.Id).FirstOrDefault().ToString();
+
                 FormsAuthentication.SetAuthCookie(orderer.Username.ToString(), false);
                 if (result == "admin")
                 {
@@ -44,7 +49,9 @@ namespace OrderSys.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Index", "Menus");
+                    Session["orderid"] = oid;
+                    //return RedirectToAction("Index", "Menus");
+                    return RedirectToAction("oidtest", "Orders");
                 }
 
 
