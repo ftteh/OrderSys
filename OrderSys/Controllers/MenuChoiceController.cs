@@ -7,10 +7,12 @@ using System.Web.Mvc;
 
 namespace OrderSys.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class MenuChoiceController : Controller
     {
         private AllContext db = new AllContext();
         // GET: MenuChoice
+        
         public ActionResult Index()
         {
             var today = DateTime.Today;
