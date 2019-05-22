@@ -123,6 +123,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\choice.css" />
     <Content Include="Content\norder.css" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\owner.css" />
     <Content Include="Content\order.css" />
@@ -157,7 +158,6 @@
     <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\OrderersController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
-    <Compile Include="Controllers\OwnersController.cs" />
     <Compile Include="Controllers\RestrictionsApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +170,14 @@
     <Compile Include="Migrations\201905221351355_ooo.Designer.cs">
       <DependentUpon>201905221351355_ooo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905221418374_tet.cs" />
+    <Compile Include="Migrations\201905221418374_tet.Designer.cs">
+      <DependentUpon>201905221418374_tet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905221426414_delete.cs" />
+    <Compile Include="Migrations\201905221426414_delete.Designer.cs">
+      <DependentUpon>201905221426414_delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\Order.cs" />
@@ -179,7 +187,6 @@
     <Compile Include="Models\AllContext.cs" />
     <Compile Include="Models\OrderChoice.cs" />
     <Compile Include="Models\Orderer.cs" />
-    <Compile Include="Models\Owner.cs" />
     <Compile Include="MyAppRoleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -207,13 +214,14 @@
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Orders\nEdit.cshtml" />
     <Content Include="Views\Orders\AllOrders.cshtml" />
-    <Content Include="Views\AuthAuth\Login.cshtml" />
+    <Content Include="Views\AuthAuth\Login-backup.cshtml" />
     <Content Include="Views\AuthAuth\Logout.cshtml" />
     <Content Include="Views\Orderers\Create.cshtml" />
     <Content Include="Views\Orderers\Delete.cshtml" />
     <Content Include="Views\Orderers\Details.cshtml" />
     <Content Include="Views\Orderers\Edit.cshtml" />
     <Content Include="Views\Orderers\Index.cshtml" />
+    <Content Include="Views\AuthAuth\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905221351355_ooo.resx">
       <DependentUpon>201905221351355_ooo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905221418374_tet.resx">
+      <DependentUpon>201905221418374_tet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905221426414_delete.resx">
+      <DependentUpon>201905221426414_delete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
