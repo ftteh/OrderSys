@@ -3,7 +3,7 @@ namespace OrderSys.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class delete : DbMigration
+    public partial class aa : DbMigration
     {
         public override void Up()
         {

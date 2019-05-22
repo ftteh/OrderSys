@@ -162,21 +162,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905221141325_aa.cs" />
-    <Compile Include="Migrations\201905221141325_aa.Designer.cs">
-      <DependentUpon>201905221141325_aa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905221351355_ooo.cs" />
-    <Compile Include="Migrations\201905221351355_ooo.Designer.cs">
-      <DependentUpon>201905221351355_ooo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905221418374_tet.cs" />
-    <Compile Include="Migrations\201905221418374_tet.Designer.cs">
-      <DependentUpon>201905221418374_tet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905221426414_delete.cs" />
-    <Compile Include="Migrations\201905221426414_delete.Designer.cs">
-      <DependentUpon>201905221426414_delete.cs</DependentUpon>
+    <Compile Include="Migrations\201905221536094_aa.cs" />
+    <Compile Include="Migrations\201905221536094_aa.Designer.cs">
+      <DependentUpon>201905221536094_aa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
@@ -214,7 +202,6 @@
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Orders\nEdit.cshtml" />
     <Content Include="Views\Orders\AllOrders.cshtml" />
-    <Content Include="Views\AuthAuth\Login-backup.cshtml" />
     <Content Include="Views\AuthAuth\Logout.cshtml" />
     <Content Include="Views\Orderers\Create.cshtml" />
     <Content Include="Views\Orderers\Delete.cshtml" />
@@ -233,17 +220,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905221141325_aa.resx">
-      <DependentUpon>201905221141325_aa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905221351355_ooo.resx">
-      <DependentUpon>201905221351355_ooo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905221418374_tet.resx">
-      <DependentUpon>201905221418374_tet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905221426414_delete.resx">
-      <DependentUpon>201905221426414_delete.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905221536094_aa.resx">
+      <DependentUpon>201905221536094_aa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

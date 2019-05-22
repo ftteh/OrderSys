@@ -13,11 +13,14 @@ namespace OrderSys.Models
         public string PhoneNo { get; set; }
         public string College { get; set; }
 
+       
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-
+      
         public string Username { get; set; }
+
+
         public string Role { get; set; }
 
         public ICollection<Order> Orders { get; set; }
