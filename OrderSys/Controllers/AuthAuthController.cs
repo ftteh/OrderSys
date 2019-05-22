@@ -49,9 +49,8 @@ namespace OrderSys.Controllers
                 }
                 else
                 {
-                    Session["orderid"] = oid;
-                    //return RedirectToAction("Index", "Menus");
-                    return RedirectToAction("oidtest", "Orders");
+                    Session["ordererid"] = oid;
+                    return RedirectToAction("nMenu", "Orders");
                 }
 
 

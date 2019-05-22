@@ -71,7 +71,7 @@ namespace OrderSys.Controllers
             List<string> name = new List<string>();
             List<int> id = new List<int>();
 
-            var ordererid = 1;
+            var ordererid = int.Parse(System.Web.HttpContext.Current.Session["ordererid"].ToString());
             int Amount = 0;
             //add to the order first
             List<string> choi = new List<string>();
@@ -162,7 +162,7 @@ namespace OrderSys.Controllers
 
         public ActionResult nOrder()
         {
-            var ordererid = 1;
+            var ordererid = int.Parse(System.Web.HttpContext.Current.Session["ordererid"].ToString());
             var oc = new OrderChoice();
 
             var dborders = (from s in db.Orders
@@ -237,7 +237,7 @@ namespace OrderSys.Controllers
                     break;
                 }
             }
-            var ordererId = 1;
+            var ordererId = int.Parse(System.Web.HttpContext.Current.Session["ordererid"].ToString());
 
             var i = (from s in db.Orders
                      where s.OrdererId == ordererId &&
@@ -258,7 +258,7 @@ namespace OrderSys.Controllers
             List<string> name = new List<string>();
             List<int> id = new List<int>();
 
-            var ordererid = 1;
+            var ordererid = int.Parse(System.Web.HttpContext.Current.Session["ordererid"].ToString());
             int Amount = 0;
 
             string Date = "";
@@ -398,6 +398,8 @@ namespace OrderSys.Controllers
 
         public ActionResult oidtest()
         {
+            
+            ViewBag.Title = int.Parse(System.Web.HttpContext.Current.Session["ordererid"].ToString());
             return View();
         }
     }
