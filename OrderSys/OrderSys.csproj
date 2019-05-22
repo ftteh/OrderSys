@@ -162,41 +162,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905201134448_update_oc_model.cs" />
-    <Compile Include="Migrations\201905201134448_update_oc_model.Designer.cs">
-      <DependentUpon>201905201134448_update_oc_model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201138106_update_oc_model1.cs" />
-    <Compile Include="Migrations\201905201138106_update_oc_model1.Designer.cs">
-      <DependentUpon>201905201138106_update_oc_model1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201138281_update_oc_model2.cs" />
-    <Compile Include="Migrations\201905201138281_update_oc_model2.Designer.cs">
-      <DependentUpon>201905201138281_update_oc_model2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201445036_occc.cs" />
-    <Compile Include="Migrations\201905201445036_occc.Designer.cs">
-      <DependentUpon>201905201445036_occc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201514170_oi.cs" />
-    <Compile Include="Migrations\201905201514170_oi.Designer.cs">
-      <DependentUpon>201905201514170_oi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905201710177_oio.cs" />
-    <Compile Include="Migrations\201905201710177_oio.Designer.cs">
-      <DependentUpon>201905201710177_oio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905211500427_tidy.cs" />
-    <Compile Include="Migrations\201905211500427_tidy.Designer.cs">
-      <DependentUpon>201905211500427_tidy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905211524517_tid.cs" />
-    <Compile Include="Migrations\201905211524517_tid.Designer.cs">
-      <DependentUpon>201905211524517_tid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905220144361_auth.cs" />
-    <Compile Include="Migrations\201905220144361_auth.Designer.cs">
-      <DependentUpon>201905220144361_auth.cs</DependentUpon>
+    <Compile Include="Migrations\201905221031282_oo.cs" />
+    <Compile Include="Migrations\201905221031282_oo.Designer.cs">
+      <DependentUpon>201905221031282_oo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
@@ -248,6 +216,7 @@
     <Content Include="Views\Orderers\Details.cshtml" />
     <Content Include="Views\Orderers\Edit.cshtml" />
     <Content Include="Views\Orderers\Index.cshtml" />
+    <Content Include="Views\Orders\UpSettle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -259,32 +228,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905201134448_update_oc_model.resx">
-      <DependentUpon>201905201134448_update_oc_model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201138106_update_oc_model1.resx">
-      <DependentUpon>201905201138106_update_oc_model1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201138281_update_oc_model2.resx">
-      <DependentUpon>201905201138281_update_oc_model2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201445036_occc.resx">
-      <DependentUpon>201905201445036_occc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201514170_oi.resx">
-      <DependentUpon>201905201514170_oi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905201710177_oio.resx">
-      <DependentUpon>201905201710177_oio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905211500427_tidy.resx">
-      <DependentUpon>201905211500427_tidy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905211524517_tid.resx">
-      <DependentUpon>201905211524517_tid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905220144361_auth.resx">
-      <DependentUpon>201905220144361_auth.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905221031282_oo.resx">
+      <DependentUpon>201905221031282_oo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

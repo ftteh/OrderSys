@@ -26,6 +26,12 @@
         <th>
             @Html.DisplayNameFor(model => model.OrdererId)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            Action
+        </th>
 
         <th></th>
     </tr>
@@ -49,9 +55,18 @@
                 @Html.DisplayFor(modelItem => item.OrdererId)
             </td>
             <td>
-                @*<button type="button" class="btn btn-primary btn-md" onclick="location.href='deliver?orderid=@item.Id'">Delivered</button>
-                <button type="button" class="btn btn-primary btn-md" onclick="location.href='undeliver?orderid=@item.Id'">Undeliver</button>
-                <button type="button" class="btn btn-primary btn-md" onclick="location.href='del?orderid=@item.Id'">Delete</button>*@
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @if (item.Status == "Pending")
+                {
+                    <button type="button" class="btn btn-primary btn-md" onclick="location.href='deliver?orderid=@item.Id'">Deliver</button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-primary btn-md" onclick="location.href='pending?orderid=@item.Id'">Pending</button>
+                }
+                <button type="button" class="btn btn-primary btn-md" onclick="location.href='delete?orderid=@item.Id'">Delete</button>
             </td>
         </tr>
     }

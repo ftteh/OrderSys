@@ -9,12 +9,6 @@ namespace OrderSys.Controllers
     {
         AllContext db = new AllContext();
 
-        //// GET: AuthAuth
-        //public ActionResult SignUp()
-        //{
-        //    return View();
-        //}
-
         [AllowAnonymous]
         public ActionResult Login()
         {
@@ -42,6 +36,7 @@ namespace OrderSys.Controllers
                                  where x.Username == orderer.Username
                                  where x.Password == orderer.Password
                                  select x.Role).FirstOrDefault().ToString();
+
                 FormsAuthentication.SetAuthCookie(orderer.Username.ToString(), false);
                 if (result == "admin")
                 {

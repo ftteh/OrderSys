@@ -343,8 +343,57 @@ namespace OrderSys.Controllers
             return Redirect("nOrder");
         }
 
+        public ActionResult Deliver()
+        {
+            string orderid = Request.QueryString.ToString().Split('&').First().Split('=')[1];
+            int oid = int.Parse(orderid);
 
+            var s = (from o in db.Orders
+                     where o.Id == oid
+                     select o);
 
+            foreach (Order ord in s)
+            {
+                ord.Status = "Delivered";
+            }
 
+            db.SaveChanges();
+            return Redirect("AllOrders");
+        }
+
+        public ActionResult Pending()
+        {
+            string orderid = Request.QueryString.ToString().Split('&').First().Split('=')[1];
+            int oid = int.Parse(orderid);
+
+            var s = (from o in db.Orders
+                     where o.Id == oid
+                     select o);
+
+            foreach (Order ord in s)
+            {
+                ord.Status = "Pending";
+            }
+
+            db.SaveChanges();
+            return Redirect("AllOrders");
+        }
+        //owner delete
+        public ActionResult Delete()
+        {
+            string orderid = Request.QueryString.ToString().Split('&').First().Split('=')[1];
+            int oid = int.Parse(orderid);
+
+            var s = from o in db.Orders
+                     where o.Id == oid
+                     select o;
+
+            foreach (Order ord in s)
+            {
+                db.Orders.Remove(ord);
+            }
+            db.SaveChanges();
+            return Redirect("AllOrders");
+        }
     }
 }

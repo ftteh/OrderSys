@@ -20,6 +20,7 @@ namespace OrderSys.Models
             this.Location = location;
             this.OrdererId = ordererid;
             this.Amount = amt;
+            this.Status = "Pending"; 
         }
         public int Id { get; set; }
         public string Date { get; set; }
@@ -27,7 +28,7 @@ namespace OrderSys.Models
         public string Location { get; set; }
         public int Amount { get; set; }
         public int OrdererId { get; set; }
-        public string Settle { get; set; }
+        public string Status { get; set; }
         public List<Choice> Choices { get; set; }
 
     }
