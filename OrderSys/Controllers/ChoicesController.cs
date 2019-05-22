@@ -44,7 +44,7 @@ namespace OrderSys.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Item,Price,Pic")] Choice choice, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "Id,Item,Price,Pic,description")] Choice choice, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace OrderSys.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Item,Price,Pic")] Choice choice, HttpPostedFileBase file)
+        public ActionResult Edit([Bind(Include = "Id,Item,Price,Pic,description")] Choice choice, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {

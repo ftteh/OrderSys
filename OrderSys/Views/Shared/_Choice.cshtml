@@ -8,7 +8,7 @@
     <header class="header-banner" id="i73c">
         <div class="container-width">
             <div class="logo-container">
-                <div class="logo">Home</div>
+                <div class="logo">@Html.ActionLink("Home", "Index", new { controller = "MenuChoice" })</div>
             </div>
             <nav class="menu">
                 @if (User.Identity.IsAuthenticated)
@@ -16,7 +16,7 @@
                     if (User.IsInRole("admin"))
                     {
                         <div class="menu-item">@Html.ActionLink("Create", "Create", new { controller = "Choices" })</div>
-                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update")</div>
+                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update", new { controller = "MenuChoice" })</div>
                     }
                     else if (User.IsInRole("customer"))
                     {
