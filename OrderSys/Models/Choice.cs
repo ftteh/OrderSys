@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,7 +11,10 @@ namespace OrderSys.Models
 
         public int Id { get; set; }
         public string Item { get; set; }
+
+       
         public int Price{ get; set; }
+
         public String Pic{ get; set; }
         public string description { get; set; }
         public virtual ICollection<Menu> Menus { set; get; }
