@@ -166,6 +166,10 @@
     <Compile Include="Migrations\201905221141325_aa.Designer.cs">
       <DependentUpon>201905221141325_aa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905221351355_ooo.cs" />
+    <Compile Include="Migrations\201905221351355_ooo.Designer.cs">
+      <DependentUpon>201905221351355_ooo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
     <Compile Include="Models\Order.cs" />
@@ -201,7 +205,6 @@
     <Content Include="Views\MenuChoice\Index.cshtml" />
     <Content Include="Views\Shared\_Owner.cshtml" />
     <Content Include="Views\Shared\_Choice.cshtml" />
-    <Content Include="Views\Orders\DisplayMenu.cshtml" />
     <Content Include="Views\Orders\nMenu.cshtml" />
     <Content Include="Views\Orders\nOrder.cshtml" />
     <Content Include="Views\Shared\_nOrder.cshtml" />
@@ -216,8 +219,6 @@
     <Content Include="Views\Orderers\Details.cshtml" />
     <Content Include="Views\Orderers\Edit.cshtml" />
     <Content Include="Views\Orderers\Index.cshtml" />
-    <Content Include="Views\Orders\UpSettle.cshtml" />
-    <Content Include="Views\Orders\oidtest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,6 +232,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905221141325_aa.resx">
       <DependentUpon>201905221141325_aa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905221351355_ooo.resx">
+      <DependentUpon>201905221351355_ooo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
