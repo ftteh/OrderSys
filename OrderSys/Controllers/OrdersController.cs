@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace OrderSys.Controllers
 {
+    [Authorize(Roles = "customer")]
     public class OrdersController : Controller
     {
         private AllContext db = new AllContext();
