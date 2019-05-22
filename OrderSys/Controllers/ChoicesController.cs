@@ -14,6 +14,7 @@ namespace OrderSys.Controllers
         // GET: Choices
         public ActionResult Index()
         {
+            
             return View(db.Choices.ToList());
         }
 
