@@ -17,16 +17,18 @@
                     if (User.IsInRole("admin"))
                     {
                         <div class="menu-item">@Html.ActionLink("Choice", "Index", new { controller = "Choices" })</div>
-                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update")</div>
+                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update")</div>                       
+                        <div class="menu-item">@Html.ActionLink("Manage User", "Index", new { controller = "Orderers" })</div>
                     }
-                    else if (User.IsInRole("customer"))
-                    {
-                        <div class="menu-item">Misc<br /></div>
-                        <div class="menu-item">Sales</div>
-                        <div class="menu-item">Orders</div>
-                    }
-                        <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
                 }
+                else if (User.IsInRole("customer"))
+                {
+                    <div class="menu-item">Misc<br /></div>
+                    <div class="menu-item">Sales</div>
+                    <div class="menu-item">Orders</div>
+                }
+                <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
+                
 
             </nav>
             <div class="clearfix"></div>

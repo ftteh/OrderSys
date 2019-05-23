@@ -29,6 +29,7 @@
                 @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
 
             </div>
+            <br />
 
             <div >
                 @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -37,6 +38,9 @@
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
               
             </div>
+
+            <br />
+
             @if (ViewBag.Message != null)
             {
                 <script type="text/javascript">
@@ -46,8 +50,10 @@
                 </script>
             }
             <div >
-                <div >
+                <div>
                     <input type="submit" value="Submit" class="btn btn-default" />
+                    <br /><br /><br />
+                    <div class="logo">@Html.ActionLink("Register", "Create", new { controller = "Orderers" })</div>
                 </div>
             </div>
 
