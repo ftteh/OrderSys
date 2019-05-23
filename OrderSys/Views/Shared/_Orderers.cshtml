@@ -20,7 +20,7 @@
                         <div class="menu-item">@Html.ActionLink("Choice", "Index", new { controller = "Choices" })</div>
                         <div class="menu-item">@Html.ActionLink("Orders", "AllOrders", new { controller = "Orders" })</div>
                         <div class="menu-item">@Html.ActionLink("Menu", "Index", new { controller = "MenuChoice" })</div>
-                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update",new { controller = "MenuChoice" })</div>
+                        <div class="menu-item">@Html.ActionLink("Update Menu", "Update", new { controller = "MenuChoice" })</div>
                         <div class="menu-item">@Html.ActionLink("Manage User", "Index", new { controller = "Orderers" })</div>
                     }
                     else if (User.IsInRole("customer"))

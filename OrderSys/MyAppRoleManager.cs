@@ -40,6 +40,7 @@ namespace OrderSys
 
         public override string[] GetRolesForUser(string username)
         {
+
             string result = db.Orderers.Where(x => x.Username == username).FirstOrDefault().Role;
             string[] roleList = { result };
             return roleList;

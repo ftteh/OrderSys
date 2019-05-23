@@ -200,7 +200,6 @@
     <Content Include="Views\Orders\nMenu.cshtml" />
     <Content Include="Views\Orders\nOrder.cshtml" />
     <Content Include="Views\Shared\_nOrder.cshtml" />
-    <Content Include="Views\Orders\nOrderList.cshtml" />
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Orders\nEdit.cshtml" />
     <Content Include="Views\Orders\AllOrders.cshtml" />
@@ -213,6 +212,7 @@
     <Content Include="Views\AuthAuth\Login.cshtml" />
     <Content Include="Views\Shared\_Edit.cshtml" />
     <Content Include="Views\Shared\_AllOrders.cshtml" />
+    <Content Include="Views\Shared\_Orderers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

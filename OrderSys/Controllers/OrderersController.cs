@@ -16,14 +16,12 @@ namespace OrderSys.Controllers
         private AllContext db = new AllContext();
 
         // GET: Orderers
-        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             return View(db.Orderers.ToList());
         }
 
         // GET: Orderers/Details/5
-        [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -62,7 +60,6 @@ namespace OrderSys.Controllers
         }
 
         // GET: Orderers/Edit/5
-        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,7 +79,6 @@ namespace OrderSys.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "Id,Name,PhoneNo,College,Password,Username,Role")] Orderer orderer)
         {
             if (ModelState.IsValid)
@@ -95,7 +91,6 @@ namespace OrderSys.Controllers
         }
 
         // GET: Orderers/Delete/5
-        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +108,6 @@ namespace OrderSys.Controllers
         // POST: Orderers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Orderer orderer = db.Orderers.Find(id);
