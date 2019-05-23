@@ -2,14 +2,13 @@
 
 @{
     ViewBag.Title = "AllOrders";
+    Layout = "~/Views/Shared/_AllOrders.cshtml";
 }
 
-<h2>AllOrders</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+
+<table class="table" style="margin-left:20px">
+<h2>All Orders</h2>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Date)

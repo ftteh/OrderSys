@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
+} 
+.container-width {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.blk-sect {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #222222;
+    font-family: Helvetica, serif;
+}
+
+.blk-desc {
+    color: #b1b1b1;
+    font-size: 15px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 100;
+}
+
+.price-cards {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-card-cont {
+    width: 300px;
+    padding: 7px;
+    float: left;
+}
+
+.price-card {
+    margin: 0 auto;
+    min-height: 350px;
+    background-color: #d983a6;
+    border-radius: 5px;
+    font-weight: 100;
+    color: #fff;
+    width: 90%;
+}
+
+.pc-title {
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.pc-feature {
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+    .pc-feature:nth-of-type(2n) {
+        background-color: transparent;
+    }
+
+.pc-amount {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 35px;
+    text-align: center;
+    padding: 35px 0;
+}
+
+#im2hg {
+    color: black;
+    width: 258px;
+    height: 184px;
+}

@@ -121,6 +121,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\delete.css" />
+    <Content Include="Content\choiceedit.css" />
     <Content Include="Content\choice.css" />
     <Content Include="Content\norder.css" />
     <Content Include="Content\login.css" />
@@ -209,6 +211,8 @@
     <Content Include="Views\Orderers\Edit.cshtml" />
     <Content Include="Views\Orderers\Index.cshtml" />
     <Content Include="Views\AuthAuth\Login.cshtml" />
+    <Content Include="Views\Shared\_Edit.cshtml" />
+    <Content Include="Views\Shared\_AllOrders.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

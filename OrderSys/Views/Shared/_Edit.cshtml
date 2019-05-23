@@ -1,0 +1,30 @@
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="~/Content/choiceedit.css" rel="stylesheet" type="text/css" />
+
+    <body>
+        <footer class="footer-under">
+            <div class="container-width">
+                <div class="footer-container">
+                    <div class="form-sub">
+                        <div class="foot-form-cont">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+
+                <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+                <script src="~/Scripts/jquery.validate.min.js"></script>
+                <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+        </footer>
+    </body>
+    <html>

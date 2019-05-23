@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace OrderSys.Controllers
 {
-    [Authorize(Roles = "admin")]
+    //[Authorize(Roles = "admin")]
     public class ChoicesController : Controller
     {
         private AllContext db = new AllContext();

@@ -1,49 +1,41 @@
 ﻿@model OrderSys.Models.Choice
+@{
+    Layout= null;
+}
+<!doctype html>
+<html lang="en">
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Choice</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Item)
-        </dt>
+<head>
+    <meta charset="utf-8">
+    <link href="~/Content/delete.css" rel="stylesheet" type="text/css" />
+</head>
 
-        <dd>
-            @Html.DisplayFor(model => model.Item)
-        </dd>
+<body>
+    <section class="blk-sect">
+        <div class="container-width">
+            <div class="blk-desc">Are you sure you want to delete this ?<br /></div>
+            <div class="price-cards">
+                <div class="price-card-cont">
+                    <div class="price-card">
+                        <div class="pc-title">@Html.DisplayFor(model => model.Item)</div>
+                        <div class="pc-feature odd-feat">+<b id="iej5p-2">Price</b>: RM @Html.DisplayFor(model => model.Price) <br id="ittiz-2" /></div>
+                        <div class="pc-feature">+ Description: @Html.DisplayFor(model => model.description)<br id="io265-2" /></div>
+                        <div class="pc-amount odd-feat">
+                            <div class="form-actions no-color">
+                                @using (Html.BeginForm())
+                                {@Html.AntiForgeryToken()
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Pic)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Pic)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                                <div>
+                                    <input type="submit" value="Delete" class="btn btn-default" />
+                                </div>
+                            }
+                            </div><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    }
-</div>
+    | @Html.ActionLink("Back to List", "Index")
+    </section>
+</body>
+</html>

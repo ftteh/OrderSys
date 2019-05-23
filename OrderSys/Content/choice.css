@@ -131,21 +131,10 @@ body {
 }
 
 .button {
-    width: auto;
-    margin: 15px 0;
     background-color: #785580;
-    border: none;
     color: #fff;
-    border-radius: 2px;
-    padding: 7px 10px;
     font-size: 1em;
     cursor: pointer;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    align-self: center;
-    justify-content: space-around;
 }
 
 .bdg-sect {

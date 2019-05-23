@@ -7,7 +7,8 @@
     body {
         background-color: #222222;
     }
-    .button{
+
+    .button {
         display: inline-block;
     }
 </style>
@@ -18,12 +19,12 @@
         <div class="row">
             <div class="column">
                 <div class="cell" id="iyi1q"><img src="~/images/choices/@Url.Content(item.Pic)" alt="Image" style="height:150px;width:150px;" id="i37me" /></div>
-                <div class="cell" id="ipurk">
-                    <div id="ic92f" style="text-align:center"><b>@Html.DisplayFor(modelItem => item.Item)</b></div>
-                    <div id="irj03" style="text-align:center">RM @Html.DisplayFor(modelItem => item.Price)</div>
-                    <div id="i3s6n">@Html.DisplayFor(modelItem => item.description) </div>
-                        <button class="button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
-                        <button class="button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                <div id="ic92f" style="text-align:center"><b>@Html.DisplayFor(modelItem => item.Item)</b></div>
+                <div id="irj03" style="text-align:center">RM @Html.DisplayFor(modelItem => item.Price)</div>
+                <div id="i3s6n">@Html.DisplayFor(modelItem => item.description) </div>
+                <div>
+                    <button class="button">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                    <button class="button">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
                 </div>
             </div>
         </div>
