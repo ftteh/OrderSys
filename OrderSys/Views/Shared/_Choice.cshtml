@@ -13,8 +13,11 @@
             <nav class="menu">
                 @if (User.Identity.IsAuthenticated)
                 {
+                    <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
+
                     if (User.IsInRole("admin"))
                     {
+                        <div class="menu-item">@Html.ActionLink("Create", "Create", new { controller = "Choices" })</div>
                         <div class="menu-item">@Html.ActionLink("Choice", "Index", new { controller = "Choices" })</div>
                         <div class="menu-item">@Html.ActionLink("Orders", "AllOrders", new { controller = "Orders" })</div>
                         <div class="menu-item">@Html.ActionLink("Menu", "Index", new { controller = "MenuChoice" })</div>
@@ -25,7 +28,6 @@
                     {
                         <div class="menu-item">@Html.ActionLink("Check Order", "nOrder", new { controller = "Orders" })</div>
                     }
-                    <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
                 }
             </nav>
             <div class="clearfix"></div>

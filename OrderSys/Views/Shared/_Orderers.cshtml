@@ -15,6 +15,8 @@
 
                 @if (User.Identity.IsAuthenticated)
                 {
+                    <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
+
                     if (User.IsInRole("admin"))
                     {
                         <div class="menu-item">@Html.ActionLink("Choice", "Index", new { controller = "Choices" })</div>
@@ -27,7 +29,6 @@
                     {
                         <div class="menu-item">@Html.ActionLink("Check Order", "nOrder", new { controller = "Orders" })</div>
                     }
-                    <div class="menu-item">@Html.ActionLink("Logout", "Logout", new { controller = "AuthAuth" })</div>
                 }
 
             </nav>

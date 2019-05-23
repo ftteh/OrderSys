@@ -164,9 +164,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905221536094_aa.cs" />
-    <Compile Include="Migrations\201905221536094_aa.Designer.cs">
-      <DependentUpon>201905221536094_aa.cs</DependentUpon>
+    <Compile Include="Migrations\201905230803196_first.cs" />
+    <Compile Include="Migrations\201905230803196_first.Designer.cs">
+      <DependentUpon>201905230803196_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Choice.cs" />
@@ -224,8 +224,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905221536094_aa.resx">
-      <DependentUpon>201905221536094_aa.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905230803196_first.resx">
+      <DependentUpon>201905230803196_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
